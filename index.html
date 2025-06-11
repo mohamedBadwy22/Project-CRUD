@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD Project</title>
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="CSS/main.css" />
+  </head>
+  <body>
+    <header class="d-flex justify-content-center mt-4">
+      <img
+        src="images/ChatGPT Image 11 يونيو 2025، 10_42_02 م.png"
+        alt="devices"
+        class="rounded-circle mx-3"
+      />
+      <h1 class="align-self-center">Simple CRUD Site</h1>
+      <img
+        src="images/ChatGPT Image 11 يونيو 2025، 10_42_02 م.png"
+        alt="devices"
+        class="rounded-circle mx-3"
+      />
+    </header>
+
+    <div class="form mt-5">
+      <div class="container d-flex flex-column">
+        <div class="input-group mb-3 w-50 mx-auto">
+          <div class="form-floating">
+            <input
+              type="text"
+              class="form-control"
+              id="productName"
+              placeholder="Product Name"
+            />
+            <label for="productName"
+              >Product Name <i class="fa-solid fa-signature"></i
+            ></label>
+          </div>
+        </div>
+        <div class="input-group mb-3 w-50 mx-auto">
+          <div class="form-floating">
+            <input
+              type="text"
+              class="form-control"
+              id="productPrice"
+              placeholder="Product Price"
+            />
+            <label for="productPrice"
+              >Product Price <i class="fa-regular fa-money-bill-1"></i
+            ></label>
+          </div>
+        </div>
+        <div class="input-group mb-3 w-50 mx-auto">
+          <div class="form-floating">
+            <input
+              list="dataOptions"
+              type="text"
+              class="form-control"
+              id="category"
+              placeholder="Category"
+            />
+            <label for="category"
+              >Category <i class="fa-solid fa-list-ul"></i
+            ></label>
+            <datalist id="dataOptions">
+              <option value="Screen"></option>
+              <option value="Mobile"></option>
+              <option value="Watch"></option>
+              <option value="Accessories"></option>
+            </datalist>
+          </div>
+        </div>
+        <div class="mb-3 w-50 mx-auto">
+          <input
+            class="form-control form-control-lg"
+            id="formFileLg"
+            type="file"
+          />
+        </div>
+        <div class="form-floating mb-3 w-50 mx-auto">
+          <textarea
+            class="form-control"
+            placeholder="Leave a comment here"
+            id="description"
+            style="height: 100px"
+          ></textarea>
+          <label for="description"
+            >Your Description <i class="fa-solid fa-circle-info"></i
+          ></label>
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary w-50 align-self-center mb-3"
+          id="submitBtn"
+        >
+          <i class="fa-solid fa-plus"></i> Add Product
+        </button>
+        <button
+          type="submit"
+          class="btn btn-outline-primary w-50 align-self-center d-none"
+          id="updateBtn"
+        >
+          <i class="fa-solid fa-pen-to-square"></i> Update Product
+        </button>
+      </div>
+    </div>
+    <div class="itemsSection my-5">
+      <div id="noMatch" class="d-none">
+        <div class="container">
+          <p class="rounded-pill bg-danger-subtle text-center p-2">There is no matched item please try another word <i class="fa-regular fa-face-frown"></i></p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="form-floating mb-5">
+          <input type="text" class="form-control" id="search" placeholder="Search"/>
+          <label for="search">Search <i class="fa-solid fa-magnifying-glass"></i></label>
+        </div>
+        <div class="row gy-5 gx-4" id="itemContainer">
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="layout"
+      class="position-fixed top-0 start-0 end-0 bottom-0 d-flex justify-content-center align-items-center d-none z-3"
+    >
+      <div id="errorMessage" class="bg-white py-4 px-3 rounded-2">
+        <div class="icons d-flex justify-content-between mb-4">
+          <div class="color-circles">
+            <i class="fa-solid p-1 fa-lg fa-circle text-danger"></i>
+            <i class="fa-solid p-1 fa-lg fa-circle text-warning"></i>
+            <i class="fa-solid p-1 fa-lg fa-circle text-success"></i>
+          </div>
+          <i
+            class="fa-solid fa-xl fa-xmark align-self-center"
+            onClick="closeTab()"
+          ></i>
+        </div>
+        <p>Data is not valid, Please follow the rules below :</p>
+        <ul class="listContainer list-unstyled">
+          <li>
+            <i class="fa-regular fa-circle-right text-danger"></i> Product name
+            must contain at least 3 characters and the first one is capital
+            letter
+          </li>
+          <li>
+            <i class="fa-regular fa-circle-right text-danger"></i> Product price
+            must be between 6000 and 60000
+          </li>
+          <li>
+            <i class="fa-regular fa-circle-right text-danger"></i> Category must
+            follow the suggested list
+          </li>
+          <li>
+            <i class="fa-regular fa-circle-right text-danger"></i> Image must be
+            of extention .jpg , .jpeg or .png
+          </li>
+          <li>
+            <i class="fa-regular fa-circle-right text-danger"></i> Description
+            length must be between 0–250 characters
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/index.js"></script>
+  </body>
+</html>

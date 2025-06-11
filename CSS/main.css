@@ -1,0 +1,36 @@
+header {
+    img {
+        width: 3.75rem;
+    }
+}
+
+.item {
+  transition: transform 500ms;
+    ul {
+        li {
+            font-family: 'Courier New', Courier, monospace, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-weight: 800;
+        }
+    }
+}
+
+.item:hover {
+  transform: scale(1.1);
+}
+
+#layout {
+  background-color: rgba(0, 0, 0, 0.503);
+  #errorMessage {
+  width: 40%;
+  p {
+    font-size: 1.3125rem;
+  }
+  ul {
+    font-size: 1.125rem;
+    li {
+      padding: 0.5rem 0.25rem;
+    }
+  }
+}
+}
+
