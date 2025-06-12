@@ -25,7 +25,7 @@
 
     <div class="form mt-5">
       <div class="container d-flex flex-column">
-        <div class="input-group mb-3 w-50 mx-auto">
+        <div class="input-group mb-3 mx-auto myInput">
           <div class="form-floating">
             <input
               type="text"
@@ -38,7 +38,7 @@
             ></label>
           </div>
         </div>
-        <div class="input-group mb-3 w-50 mx-auto">
+        <div class="input-group mb-3 mx-auto myInput">
           <div class="form-floating">
             <input
               type="text"
@@ -51,7 +51,7 @@
             ></label>
           </div>
         </div>
-        <div class="input-group mb-3 w-50 mx-auto">
+        <div class="input-group mb-3 mx-auto myInput">
           <div class="form-floating">
             <input
               list="dataOptions"
@@ -71,23 +71,16 @@
             </datalist>
           </div>
         </div>
-        <div class="mb-3 w-50 mx-auto">
+        <div class="mb-3 mx-auto myInput">
           <input
             class="form-control form-control-lg"
             id="formFileLg"
             type="file"
           />
         </div>
-        <div class="form-floating mb-3 w-50 mx-auto">
-          <textarea
-            class="form-control"
-            placeholder="Leave a comment here"
-            id="description"
-            style="height: 100px"
-          ></textarea>
-          <label for="description"
-            >Your Description <i class="fa-solid fa-circle-info"></i
-          ></label>
+        <div class="form-floating mb-3 mx-auto textareaDiv">
+          <textarea class="form-control" placeholder="Leave a comment here" id="description" style="height: 100px"></textarea>
+          <label for="description">Your Description <i class="fa-solid fa-circle-info"></i></label>
         </div>
         <button
           type="submit"
@@ -105,6 +98,7 @@
         </button>
       </div>
     </div>
+
     <div class="itemsSection my-5">
       <div id="noMatch" class="d-none">
         <div class="container">
@@ -121,10 +115,7 @@
       </div>
     </div>
 
-    <div
-      id="layout"
-      class="position-fixed top-0 start-0 end-0 bottom-0 d-flex justify-content-center align-items-center d-none z-3"
-    >
+    <div id="layout" class="position-fixed top-0 start-0 end-0 bottom-0 d-flex justify-content-center align-items-center z-3 d-none">
       <div id="errorMessage" class="bg-white py-4 px-3 rounded-2">
         <div class="icons d-flex justify-content-between mb-4">
           <div class="color-circles">

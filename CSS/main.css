@@ -1,8 +1,18 @@
 header {
-    img {
-        width: 3.75rem;
-    }
+  h1 {
+    font-size: 1.25rem;
+  }
+  img {
+      margin: 0;
+      width: 3.75rem;
+  }
 }
+
+.form {
+    .textareaDiv {
+      width: 100%;
+    }
+  }
 
 .item {
   transition: transform 500ms;
@@ -34,3 +44,37 @@ header {
 }
 }
 
+/* Handle Media Responsivity */
+@media screen and (min-width: 768px) {
+  header {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+  .form {
+    .textareaDiv {
+      width: 50%;
+    }
+  }
+  .myInput {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #layout {
+    #errorMessage {
+      width: 100%;
+      transform: scale(0.9);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  #layout {
+    #errorMessage {
+      width: 60%;
+      transform: scale(1);
+    }
+  }
+}
